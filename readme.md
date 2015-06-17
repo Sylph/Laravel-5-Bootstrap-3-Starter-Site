@@ -2,7 +2,7 @@
 
 Demo is here http://l5start.mrakodol.info/
 
-## Starter Site based on on Laravel 5.0 and Boostrap 3
+## Starter Site based on on Laravel 5.1 and Bootstrap 3
 * [Features](#feature1)
 * [Requirements](#feature2)
 * [How to install](#feature3)
@@ -14,7 +14,7 @@ Demo is here http://l5start.mrakodol.info/
 
 <a name="feature1"></a>
 ## Starter Site Features:
-* Laravel 5.0
+* Laravel 5.1
 * Twitter Bootstrap 3.2.0
 * Back-end
 	* Automatic install and settup website.
