@@ -37,10 +37,13 @@ Demo is here http://l5start.mrakodol.info/
 <a name="feature2"></a>
 ##Requirements
 
-	PHP >= 5.5.0
-	MCrypt PHP Extension
-	Enable creating triger in database
+	PHP >= 5.5.9
+	OpenSSL PHP Extension
+	Mbstring PHP Extension
+	Tokenizer PHP Extension
 	SQL server(for example MySQL)
+	Composer
+	Node JS
 
 -----
 <a name="feature3"></a>
