@@ -1,16 +1,13 @@
 <?php
+use Faker\Factory as Faker;
 
-use Illuminate\Database\Seeder;
-
-// composer require laracasts/testdummy
-use Laracasts\TestDummy\Factory as TestDummy;
-
-class ArticleCategoriesTableSeeder extends Seeder
+class ArticleCategoriesTableSeeder extends DatabaseSeeder
 {
 
 	public function run()
 	{
-		TestDummy::times(5)->create('App\ArticleCategory');
-	}
 
+		factory(App\ArticleCategory::class, 2)->create();
+
+	}
 }
