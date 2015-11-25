@@ -1,12 +1,19 @@
-<?php namespace App;
+<?php
+
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ArticleCategory extends Model
 {
 
-	protected $table = "article_categories";
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
+	protected $guarded  = array('id');
 
 	/**
 	 * Returns a formatted post content entry,

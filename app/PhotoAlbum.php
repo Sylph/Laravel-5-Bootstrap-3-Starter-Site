@@ -1,24 +1,19 @@
-<?php namespace App;
+<?php
+
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class PhotoAlbum extends Model{
+class PhotoAlbum extends Model
+{
 
-    /**
-     * Deletes a gallery all
-     * the associated images.
-     *
-     * @return bool
-     */
-    public function delete()
-    {
-        // Delete the gallery images
-        $this->photos()->delete();
+    use SoftDeletes;
 
-        // Delete the gallery
-        return parent::delete();
-    }
+    protected $dates = ['deleted_at'];
+
+    protected $guarded  = array('id');
 
     /**
      * Get the post's author.

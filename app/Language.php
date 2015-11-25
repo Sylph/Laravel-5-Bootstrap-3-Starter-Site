@@ -1,17 +1,20 @@
-<?php namespace App;
+<?php
+
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Language extends Model {
+class Language extends Model
+{
 
-	/**
-	 * The attributes included in the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $fillable = array('name', 'lang_code', 'description', 'icon');
-	
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
+	protected $guarded  = array('id');
+
 	/**
 	 * The rules for email field, automatic validation.
 	 *
